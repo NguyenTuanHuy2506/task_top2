@@ -1,0 +1,265 @@
+@import '../css/animate.css';
+.notice__inner li .notice__caption,
+.notice__inner li .notice__more, .notice__inner li .notice__title,
+.notice__inner li .notice__date {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+/*mv*/
+.mv {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  /*	mv__inner*/
+  /*    mv__background*/
+  /*    mv__content*/
+}
+.mv__inner {
+  width: 100%;
+}
+.mv__background {
+  width: 100%;
+  position: relative;
+}
+.mv__background::after {
+  content: "";
+  position: absolute;
+  width: 24vw;
+  height: 100%;
+  top: 0;
+  left: 21.5vw;
+  transform: skew(-15deg);
+  background-color: rgba(243, 152, 0, 0.1);
+}
+.mv__background img {
+  width: 100%;
+}
+.mv__content {
+  position: absolute;
+  bottom: 13vw;
+  left: 15vw;
+  padding: 5rem 3rem;
+  max-width: 75rem;
+  z-index: 10;
+}
+
+/*obj__decoration--4line*/
+.obj-decoration__1,
+.obj-decoration__2 {
+  position: absolute;
+  width: 13.4rem;
+  height: 1.4rem;
+}
+.obj-decoration__1::before, .obj-decoration__1::after,
+.obj-decoration__2::before,
+.obj-decoration__2::after {
+  content: "";
+  position: absolute;
+  height: 0.4rem;
+  background-color: #fff;
+}
+.obj-decoration__1 span,
+.obj-decoration__2 span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.obj-decoration__1 span::before, .obj-decoration__1 span::after,
+.obj-decoration__2 span::before,
+.obj-decoration__2 span::after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+}
+
+.obj-decoration__1 {
+  top: 0;
+  right: 6rem;
+}
+.obj-decoration__1::before {
+  width: 35.6rem;
+  right: 0;
+  top: 0;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-delay: 0s;
+  -webkit-animation-name: bounceInLeft;
+  animation-name: bounceInLeft;
+}
+.obj-decoration__1::after {
+  width: 23.7rem;
+  bottom: 0;
+  left: 0;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-delay: 0.25s;
+  -webkit-animation-name: bounceInRight;
+  animation-name: bounceInRight;
+}
+.obj-decoration__1 span::before {
+  left: 4.5rem;
+  top: 0.4rem;
+  width: 22.2rem;
+  height: 0.2rem;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-delay: 0.5s;
+  -webkit-animation-name: bounceInLeft;
+  animation-name: bounceInLeft;
+}
+.obj-decoration__1 span::after {
+  width: 34.5rem;
+  height: 0.1rem;
+  right: -5.5rem;
+  top: 0.6rem;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-delay: 0.75s;
+  -webkit-animation-name: bounceInLeft;
+  animation-name: bounceInLeft;
+}
+
+.obj-decoration__2 {
+  bottom: 0;
+  left: 0;
+}
+.obj-decoration__2::before {
+  width: 20.2rem;
+  right: 0;
+  top: 0;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  animation-delay: 0.75s;
+  -webkit-animation-name: bounceInRight;
+  animation-name: bounceInRight;
+}
+.obj-decoration__2::after {
+  width: 46rem;
+  bottom: 0;
+  left: 0;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  animation-delay: 1s;
+  -webkit-animation-name: bounceInLeft;
+  animation-name: bounceInLeft;
+}
+.obj-decoration__2 span::before {
+  width: 26.4rem;
+  height: 0.2rem;
+  left: -3rem;
+  top: 0.8rem;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  animation-delay: 1.25s;
+  -webkit-animation-name: bounceInLeft;
+  animation-name: bounceInLeft;
+}
+.obj-decoration__2 span::after {
+  width: 36rem;
+  height: 0.1rem;
+  left: 3rem;
+  top: 0.7rem;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  animation-delay: 1.5s;
+  -webkit-animation-name: bounceInLeft;
+  animation-name: bounceInLeft;
+}
+
+/*notice*/
+.notice {
+  width: 100%;
+  background-color: #000;
+  /*	notice__inner*/
+  /*notice__more*/
+}
+.notice__inner {
+  width: 100%;
+}
+.notice__inner li {
+  display: flex;
+  align-items: center;
+  height: 8rem;
+}
+.notice__inner li .notice__title {
+  position: relative;
+}
+.notice__inner li .notice__title:hover {
+  opacity: 0.8;
+}
+.notice__inner li .notice__title,
+.notice__inner li .notice__date {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #fff;
+}
+.notice__inner li .notice__date {
+  margin-left: 4rem;
+}
+.notice__inner li .notice__caption,
+.notice__inner li .notice__more {
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: #fff;
+}
+.notice__more {
+  outline: none !important;
+  border: 0;
+  background-color: #000;
+  width: 100%;
+  max-width: 13rem;
+  height: 100%;
+  margin-left: auto;
+  text-align: right;
+  position: relative;
+  letter-spacing: 0.1rem;
+}
+.notice__more::before {
+  content: "";
+  width: 0.2rem;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: -2rem;
+  transform: skew(-15deg);
+}
+.notice__more:hover {
+  opacity: 0.8;
+}
+
+/*# sourceMappingURL=main.css.map */

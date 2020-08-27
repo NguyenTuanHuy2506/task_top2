@@ -1,0 +1,252 @@
+@charset "UTF-8";
+@import '../css/animate.css';
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ ゴシック", sans-serif;
+}
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body > main {
+  -ms-overflow-x: hidden;
+}
+
+@supports (-ms-ime-align: auto) {
+  body > main {
+    overflow: hidden;
+  }
+}
+.title-sub, .title, .heading,
+.sub-heading {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+/*nav--link*/
+.nav--link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  text-decoration: none !important;
+}
+
+/* overlap-effect*/
+.overlap-effect {
+  position: relative;
+}
+.overlap-effect:hover::before, .overlap-effect:hover::after,
+.overlap-effect:hover span::before,
+.overlap-effect:hover span::after {
+  width: 100%;
+  opacity: 1;
+}
+.overlap-effect::before, .overlap-effect::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.75s, all 0.5s ease;
+}
+.overlap-effect::before {
+  left: 0;
+}
+.overlap-effect::after {
+  right: 0;
+}
+.overlap-effect span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: all 0.75s ease;
+}
+.overlap-effect span::before, .overlap-effect span::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.75s, all 0.5s ease 0.25s;
+}
+.overlap-effect span::before {
+  left: 0;
+}
+.overlap-effect span::after {
+  right: 0;
+}
+
+/*heading*/
+.heading,
+.sub-heading {
+  color: #fff;
+  font-style: italic;
+  letter-spacing: 0.3rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.heading {
+  font-weight: 900;
+  font-size: clamp(20px, 4.375vw, 70px);
+  margin-left: 3.5rem;
+}
+.heading.heading--2 {
+  font-size: clamp(30px, 5vw, 80px);
+  margin: 2rem 0;
+  margin-left: 2.5rem;
+}
+.heading .c-orange {
+  color: #f39800;
+  font-size: clamp(40px, 6.25vw, 100px);
+  position: relative;
+  padding: 0 1.3rem 1rem 0;
+}
+.heading .c-orange::before, .heading .c-orange::after {
+  content: "";
+  background-image: url(../images/icon_logo_banner.png);
+  background-repeat: no-repeat;
+  width: 5.5rem;
+  height: 1rem;
+  position: absolute;
+  display: block;
+}
+.heading .c-orange::before {
+  top: -0.3rem;
+  left: -0.6rem;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: bounceInLeft;
+  animation-name: bounceInLeft;
+}
+.heading .c-orange::after {
+  bottom: 0;
+  right: -2.4rem;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: bounceInRight;
+  animation-name: bounceInRight;
+}
+.heading .c-orange span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  transform: skew(-15deg);
+  z-index: -1;
+}
+
+.heading .passingbar::after,
+.sub-heading .passingbar::after {
+  transform: skew(-15deg);
+}
+
+.heading.passingbar::after,
+.sub-heading.passingbar::after {
+  transform: skew(-15deg);
+}
+
+.sub-heading {
+  font-weight: 400;
+  font-size: clamp(14px, 1.875vw, 30px);
+}
+
+/*.passingbar */
+.passingbar {
+  position: relative;
+}
+.passingbar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  background-color: #f39800;
+}
+.passingbar.animated::after {
+  -webkit-animation-name: passingBar;
+  animation-name: passingBar;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/*.passingtext */
+.passingtext {
+  opacity: 0;
+}
+.passingtext.animated {
+  -webkit-animation-name: passingText;
+  animation-name: passingText;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/*.f-straight*/
+.f-straight {
+  width: 0.1rem;
+  height: 1.4rem;
+  display: inline-block;
+  margin: 0 1.2rem;
+  background-color: #fff;
+}
+
+/*.title*/
+.title {
+  font-weight: bold;
+  font-size: clamp(24px, 3.75vw, 60px);
+  color: #1b1b1b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-style: italic;
+  letter-spacing: 1rem;
+}
+.title .first-letter::first-letter {
+  color: #f39800;
+}
+.title-sub {
+  font-weight: 400;
+  font-size: clamp(14px, 1.25vw, 20px);
+  color: #000;
+  letter-spacing: 0.1rem;
+}
+
+/*# sourceMappingURL=common.css.map */
