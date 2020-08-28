@@ -32,3 +32,33 @@ $('.mv__inner').slick({
     autoplay: true,
     autoplaySpeed: 2000,
 });
+$('.business__pri-slick').slick({
+    arrows: true,
+    prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><span></span></button>',
+    nextArrow: '<button class="slick-next" aria-label="Next" type="button"><span></span></button>',
+    dots: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    asNavFor: '.business__sec-slick'
+});
+$('.business__sec-slick').slick({
+    arrows: false,
+    dots: false,
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    asNavFor: '.business__pri-slick'
+});
+
+$('.people__inner').slick({
+    arrows: true,
+    prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><span></span></button>',
+    nextArrow: '<button class="slick-next" aria-label="Next" type="button"><span></span></button>',
+    dots: false,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+});

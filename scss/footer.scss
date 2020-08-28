@@ -1,0 +1,32 @@
+@charset "UTF-8";
+@import 'functions_responsive.scss';
+@import 'assets/variables.scss';
+
+%font-noto {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.footer {
+    width: 100%;
+    height: 10rem;
+    background-color: $c-main;
+
+    ul {
+        width: 100%;
+        height: 10rem;
+        display: flex;
+        align-items: center;
+
+        li {
+            padding-right: 2rem;
+            margin-right: 3rem;
+            font-size: 1.4rem;
+            color: #fff;
+            letter-spacing: .2rem;
+        }
+
+        .copyright {
+            margin-left: auto;
+        }
+    }
+}
