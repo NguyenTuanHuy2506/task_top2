@@ -637,8 +637,7 @@
         top: 0;
         left: 0;
         width: 70%;
-        height: 0;
-        padding-top: 43.75%;
+        height: calc(100% + 60px);
         background-color: #f8f8f8;
         z-index: -1
     }

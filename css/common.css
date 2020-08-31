@@ -1,497 +1,442 @@
 @charset "UTF-8";
 @import '../css/animate.css';
-
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ ゴシック", sans-serif;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ ゴシック", sans-serif;
 }
-
 @media screen and (max-width: 768px) {
-    body {
-        font-size: 1.4rem;
-    }
+  body {
+    font-size: 1.4rem;
+  }
 }
-
 @media screen and (max-width: 768px) {
-    body {
-        padding: 0;
-    }
+  body {
+    padding: 0;
+  }
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-body>main {
-    -ms-overflow-x: hidden;
+body > main {
+  -ms-overflow-x: hidden;
 }
 
 @supports (-ms-ime-align: auto) {
-    body>main {
-        overflow: hidden;
-    }
+  body > main {
+    overflow: hidden;
+  }
 }
-
-.button-more,
-.tt-description,
-.binis-title,
-.title-sub,
-.title,
-.heading,
+.button-more, .tt-description, .binis-title, .title-sub, .title, .heading,
 .sub-heading {
-    font-family: "Noto Sans JP", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 /*nav--link*/
 .nav--link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    text-decoration: none !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  text-decoration: none !important;
 }
 
 /* overlap-effect*/
 .overlap-effect {
-    position: relative;
+  position: relative;
 }
-
-.overlap-effect:hover::before,
-.overlap-effect:hover::after,
+.overlap-effect:hover::before, .overlap-effect:hover::after,
 .overlap-effect:hover span::before,
 .overlap-effect:hover span::after {
-    width: 100%;
+  width: 100%;
 }
-
-.overlap-effect::before,
-.overlap-effect::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 0;
-    height: 100%;
-    z-index: 1;
-    transition: opacity 0.5s, all 0.4s ease;
+.overlap-effect::before, .overlap-effect::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  z-index: 1;
+  transition: opacity 0.5s, all 0.4s ease;
 }
-
 .overlap-effect::before {
-    left: 0;
+  left: 0;
 }
-
 .overlap-effect::after {
-    right: 0;
+  right: 0;
 }
-
 .overlap-effect span {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 25;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.75s ease;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.75s ease;
 }
-
-.overlap-effect span::before,
-.overlap-effect span::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 0;
-    height: 100%;
-    z-index: -1;
-    transition: opacity 0.5s, all 0.4s ease 0.4s;
+.overlap-effect span::before, .overlap-effect span::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  transition: opacity 0.5s, all 0.4s ease 0.4s;
 }
-
 .overlap-effect span::before {
-    left: 0;
+  left: 0;
 }
-
 .overlap-effect span::after {
-    right: 0;
+  right: 0;
 }
 
 /*heading*/
 .heading,
 .sub-heading {
-    color: #fff;
-    font-style: italic;
-    letter-spacing: 0.3rem;
-    display: flex;
-    align-items: flex-end;
+  color: #fff;
+  font-style: italic;
+  letter-spacing: 0.3rem;
+  display: flex;
+  align-items: flex-end;
 }
 
 .heading {
-    font-weight: 900;
-    font-size: 4.375vw;
-    margin-left: 3.5rem;
+  font-weight: 900;
+  font-size: 4.375vw;
+  margin-left: 3.5rem;
 }
-
 @media screen and (max-width: 768px) {
-    .heading {
-        font-size: 3rem;
-    }
+  .heading {
+    font-size: 3rem;
+  }
 }
-
 .heading.heading--2 {
-    font-size: 5vw;
-    margin: 2rem 0;
-    margin-left: 2.5rem;
+  font-size: 5vw;
+  margin: 2rem 0;
+  margin-left: 2.5rem;
 }
-
 @media screen and (max-width: 768px) {
-    .heading.heading--2 {
-        font-size: 3rem;
-    }
+  .heading.heading--2 {
+    font-size: 3rem;
+  }
 }
-
 .heading .c-orange {
-    color: #f39800;
-    font-size: 6.25vw;
-    position: relative;
-    padding: 0 1.3rem 1rem 0;
+  color: #f39800;
+  font-size: 6.25vw;
+  position: relative;
+  padding: 0 1.3rem 1rem 0;
 }
-
 @media screen and (max-width: 768px) {
-    .heading .c-orange {
-        font-size: 4rem;
-    }
+  .heading .c-orange {
+    font-size: 4rem;
+  }
 }
-
-.heading .c-orange::before,
-.heading .c-orange::after {
-    content: "";
-    background-image: url(../images/icon_logo_banner.png);
-    background-repeat: no-repeat;
-    width: 5.5rem;
-    height: 1rem;
-    position: absolute;
-    display: block;
+.heading .c-orange::before, .heading .c-orange::after {
+  content: "";
+  background-image: url(../images/icon_logo_banner.png);
+  background-repeat: no-repeat;
+  width: 5.5rem;
+  height: 1rem;
+  position: absolute;
+  display: block;
 }
-
 .heading .c-orange::before {
-    top: -0.3rem;
-    left: -0.6rem;
-    -webkit-animation-duration: 1.5s;
-    animation-duration: 1.5s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-name: bounceInLeft;
-    animation-name: bounceInLeft;
+  top: -0.3rem;
+  left: -0.6rem;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: bounceInLeft;
+  animation-name: bounceInLeft;
 }
-
 .heading .c-orange::after {
-    bottom: 0;
-    right: -2.4rem;
-    -webkit-animation-duration: 1.5s;
-    animation-duration: 1.5s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-name: bounceInRight;
-    animation-name: bounceInRight;
+  bottom: 0;
+  right: -2.4rem;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: bounceInRight;
+  animation-name: bounceInRight;
 }
-
 .heading .c-orange span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    transform: skew(-15deg);
-    z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  transform: skew(-15deg);
+  z-index: -1;
 }
 
 .heading .passingbar::after,
 .sub-heading .passingbar::after {
-    transform: skew(-15deg);
+  transform: skew(-15deg);
 }
 
 .heading.passingbar::after,
 .sub-heading.passingbar::after {
-    transform: skew(-15deg);
+  transform: skew(-15deg);
 }
 
 .sub-heading {
-    font-weight: 400;
-    font-size: 1.875vw;
+  font-weight: 400;
+  font-size: 1.875vw;
 }
-
 @media screen and (max-width: 768px) {
-    .sub-heading {
-        font-size: 1.4rem;
-    }
+  .sub-heading {
+    font-size: 1.4rem;
+  }
 }
 
 /*.passingbar */
 .passingbar {
-    position: relative;
+  position: relative;
 }
-
 .passingbar::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    height: 100%;
-    background-color: #f39800;
-    transform: skew(-15deg);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  background-color: #f39800;
+  transform: skew(-15deg);
 }
-
 .passingbar.animated::after {
-    -webkit-animation-name: passingBar;
-    animation-name: passingBar;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
+  -webkit-animation-name: passingBar;
+  animation-name: passingBar;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 /*.passingtext */
 .passingtext {
-    opacity: 0;
+  opacity: 0;
 }
-
 .passingtext.animated {
-    -webkit-animation-name: passingText;
-    animation-name: passingText;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-delay: 0.4s;
-    animation-delay: 0.4s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
+  -webkit-animation-name: passingText;
+  animation-name: passingText;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 /*.f-straight*/
 .f-straight {
-    width: 0.1rem;
-    height: 1.4rem;
-    display: inline-block;
-    margin: 0 1.2rem;
-    background-color: #fff;
+  width: 0.1rem;
+  height: 1.4rem;
+  display: inline-block;
+  margin: 0 1.2rem;
+  background-color: #fff;
 }
 
 /*.title*/
 .title {
-    font-weight: bold;
-    font-size: 3.75vw;
-    color: #1b1b1b;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-style: italic;
-    letter-spacing: 1rem;
+  font-weight: bold;
+  font-size: 3.75vw;
+  color: #1b1b1b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-style: italic;
+  letter-spacing: 1rem;
 }
-
 @media screen and (max-width: 768px) {
-    .title {
-        font-size: 3rem;
-        letter-spacing: 0.5rem;
-    }
+  .title {
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+  }
 }
-
 .title .first-letter::first-letter {
-    color: #f39800;
+  color: #f39800;
 }
-
 .title-sub {
-    font-weight: 400;
-    font-size: 1.25vw;
-    color: #000;
-    letter-spacing: 0.1rem;
+  font-weight: 400;
+  font-size: 1.25vw;
+  color: #000;
+  letter-spacing: 0.1rem;
 }
-
 @media screen and (max-width: 768px) {
-    .title-sub {
-        font-size: 1.4rem;
-    }
+  .title-sub {
+    font-size: 1.4rem;
+  }
 }
 
 .binis-title {
-    font-weight: bold;
-    font-size: 2.8rem;
-    color: #434343;
-    position: relative;
-    margin-left: 5rem;
-    margin-top: 6rem;
-    margin-bottom: 4rem;
-    letter-spacing: 0.4rem;
+  font-weight: bold;
+  font-size: 2.8rem;
+  color: #434343;
+  position: relative;
+  margin-left: 5rem;
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+  letter-spacing: 0.4rem;
 }
-
 @media screen and (max-width: 768px) {
-    .binis-title {
-        margin: 4rem 0;
-    }
+  .binis-title {
+    margin: 4rem 0;
+  }
 }
-
 .binis-title span {
-    padding-bottom: 1.2rem;
-    background-image: linear-gradient(90deg, #f39800 0%, #f39800 100%);
-    background-repeat: no-repeat;
-    background-position: left 100%;
-    background-size: 100% 4px;
+  padding-bottom: 1.2rem;
+  background-image: linear-gradient(90deg, #f39800 0%, #f39800 100%);
+  background-repeat: no-repeat;
+  background-position: left 100%;
+  background-size: 100% 4px;
 }
 
 .tt-description {
-    font-size: 1.6rem;
-    color: #434343;
-    margin-left: 5rem;
-    letter-spacing: 0.3rem;
-    line-height: 3rem;
+  font-size: 1.6rem;
+  color: #434343;
+  margin-left: 5rem;
+  letter-spacing: 0.3rem;
+  line-height: 3rem;
 }
-
 @media screen and (max-width: 768px) {
-    .tt-description {
-        margin-left: 0;
-    }
+  .tt-description {
+    margin-left: 0;
+  }
 }
 
 .icon--triangle::after {
-    content: "";
-    border-left: 0.6rem solid #fff;
-    border-top: 0.6rem solid transparent;
-    border-bottom: 0.6rem solid transparent;
-    border-right: none;
-    display: inline-block;
-    transform: translateY(-3px);
+  content: "";
+  border-left: 0.6rem solid #fff;
+  border-top: 0.6rem solid transparent;
+  border-bottom: 0.6rem solid transparent;
+  border-right: none;
+  display: inline-block;
+  transform: translateY(-3px);
 }
 
 .button-more {
-    outline: none !important;
-    max-width: 100%;
-    height: 8rem;
-    background-color: #f39800;
-    color: #fff;
-    font-size: 2.2rem;
-    font-weight: bold;
-    border: 0.2rem solid #f39800;
-    letter-spacing: 0.1rem;
-    padding: 0;
+  outline: none !important;
+  max-width: 100%;
+  height: 8rem;
+  background-color: #f39800;
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: bold;
+  border: 0.2rem solid #f39800;
+  letter-spacing: 0.1rem;
+  padding: 0;
 }
-
 @media screen and (max-width: 768px) {
-    .button-more {
-        height: 6rem;
-    }
+  .button-more {
+    height: 6rem;
+  }
 }
 
 .icon--db-square {
-    position: relative;
+  position: relative;
 }
-
-.icon--db-square::before,
-.icon--db-square::after {
-    content: "";
-    width: 0.8rem;
-    height: 0.8rem;
-    border: 0.1rem solid #fff;
-    background-color: #f39800;
-    position: absolute;
-    z-index: 1;
+.icon--db-square::before, .icon--db-square::after {
+  content: "";
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 0.1rem solid #fff;
+  background-color: #f39800;
+  position: absolute;
+  z-index: 1;
 }
-
 .icon--db-square::before {
-    top: 65%;
-    right: 1rem;
-    transform: translateY(-50%);
+  top: 65%;
+  right: 1rem;
+  transform: translateY(-50%);
 }
-
 .icon--db-square::after {
-    top: 50%;
-    right: 0.8rem;
-    transform: translateY(-50%);
+  top: 50%;
+  right: 0.8rem;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-80%);
 }
 
 .button-square {
-    position: absolute;
-    width: 6rem;
-    height: 6rem;
-    border: 0.2rem solid #fff;
-    background-color: transparent;
-    text-decoration: none !important;
-    right: 3rem;
-    bottom: 3rem;
-    transition: all 0.3s ease;
+  position: absolute;
+  width: 6rem;
+  height: 6rem;
+  border: 0.2rem solid #fff;
+  background-color: transparent;
+  text-decoration: none !important;
+  right: 3rem;
+  bottom: 3rem;
+  transition: all 0.3s ease;
 }
-
 @media screen and (max-width: 768px) {
-    .button-square {
-        width: 5rem;
-        height: 5rem;
-        right: 1rem;
-        bottom: 1rem;
-    }
+  .button-square {
+    width: 5rem;
+    height: 5rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
 }
-
 .button-square:hover {
-    background-color: #f39800;
-    opacity: 0.8;
+  background-color: #f39800;
+  opacity: 0.8;
 }
-
 .button-square:hover .icon--triangle::after {
-    border-left-color: #fff !important;
+  border-left-color: #fff !important;
 }
-
 .button-square::after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .to-top-button {
-    position: fixed;
-    width: 5rem;
-    height: 5rem;
-    background-color: #c01920;
-    right: 5rem;
-    bottom: 5rem;
-    display: none;
-    align-items: center;
-    justify-content: space-around;
-    z-index: 1000;
-    transition: all 0.3s ease;
+  position: fixed;
+  width: 5rem;
+  height: 5rem;
+  background-color: #c01920;
+  right: 5rem;
+  bottom: 5rem;
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 1000;
+  transition: all 0.3s ease;
 }
-
 .to-top-button.active {
-    display: flex;
+  display: flex;
 }
-
 @media screen and (max-width: 768px) {
-    .to-top-button {
-        right: 3rem;
-        bottom: 3rem;
-    }
+  .to-top-button {
+    right: 3rem;
+    bottom: 3rem;
+  }
 }
-
 .to-top-button span {
-    width: 3rem;
-    height: 0.2rem;
-    background-color: #fff;
+  width: 3rem;
+  height: 0.2rem;
+  background-color: #fff;
 }
-
 .to-top-button span:nth-child(1) {
-    transform: translateX(0.4rem) rotate(-45deg);
+  transform: translateX(0.4rem) rotate(-45deg);
 }
-
 .to-top-button span:nth-child(2) {
-    transform: translateX(-0.4rem) rotate(45deg);
+  transform: translateX(-0.4rem) rotate(45deg);
 }
-
 .to-top-button:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 /*# sourceMappingURL=common.css.map */

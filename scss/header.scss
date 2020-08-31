@@ -83,7 +83,7 @@
             height: calc(100vh - 80px);
             margin-top: 8rem;
             overflow-y: auto;
-            background-color: red;
+            background-color: rgba($c-text, .8);
             z-index: 1000;
 
             &.active {
@@ -136,7 +136,9 @@
     @media only screen and(max-width: 1500px) {
         width: 100%;
         justify-content: space-around;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
+        flex-direction: column;
+        margin-right: 0;
     }
 
     /*	menu__item*/
@@ -154,7 +156,8 @@
             width: 100%;
             max-width: 28rem;
             text-align: center;
-            margin: 3rem 1rem;
+            padding: 2rem 0;
+            margin: 1rem;
         }
 
         &:not(:first-child) {

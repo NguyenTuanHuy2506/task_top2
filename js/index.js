@@ -28,7 +28,7 @@ $(window).on('load resize scroll',
         //--passing bar
         $(".passing").each(function() {
             var _position = $(this).offset().top;
-            if (_scroll + _wh > _position) {
+            if (_scroll + _wh > _position + _wh /4) {
                 $(this).addClass('animated');
             }
         });
