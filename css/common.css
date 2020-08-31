@@ -18,10 +18,6 @@ body {
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body > main {
   -ms-overflow-x: hidden;
 }
@@ -361,6 +357,7 @@ body > main {
   top: 65%;
   right: 1rem;
   transform: translateY(-50%);
+  -ms-transform: translateY(-80%);
 }
 .icon--db-square::after {
   top: 50%;
@@ -406,10 +403,11 @@ body > main {
   position: fixed;
   width: 5rem;
   height: 5rem;
-  background-color: #c01920;
+  background-color: #f39800;
   right: 5rem;
   bottom: 5rem;
   display: none;
+  cursor: pointer;
   align-items: center;
   justify-content: space-around;
   z-index: 1000;

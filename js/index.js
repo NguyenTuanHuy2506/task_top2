@@ -1,10 +1,10 @@
 var _secSlick = 0;
 $(window).on('load resize scroll',
     function() {
-        var _scroll = $(window).scrollTop();
-        var _toTopButton = $('.to-top-button');
-        var _wh = $(window).height();
-        var _ww = $(window).width();
+        let _scroll = $(window).scrollTop();
+        let _toTopButton = $('.to-top-button');
+        let _wh = $(window).height();
+        let _ww = $(window).width();
 
         if (_ww >= 1025 && _secSlick === 0) {
             _businessSecondSlick();
@@ -140,7 +140,7 @@ $('.hambuger-button').click(function() {
             delayF(function() {
                 _this.removeClass('active');
                 _menu.removeClass('active').removeClass(_cssOut);
-                _header.removeClass('active');
+                if($(window).scrollTop() == 0) _header.removeClass('active');
                 _menuOpen = 0;
             }, 800)();
         } else {
@@ -150,13 +150,11 @@ $('.hambuger-button').click(function() {
 });
 
 
-$('.to-top-button').click(function(event) {
-    /* Act on the event */
-    var _timed = $(window).scrollTop();
-    $('html, body').animate({
-        scrollTop: 0 //$($.attr(this, 'href')).offset().top
-    }, _timed/2, 'linear');
-    return false;
+$('.to-top-button').click(function(e) {
+
+    e.preventDefault();
+    let _time =  $(window).scrollTop();
+    $('html, body').animate({scrollTop: 0}, Math.floor(_time/6), 'linear');
 });
 //----------delay function-------//
 function delayF(func, timed) {

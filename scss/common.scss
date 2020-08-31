@@ -20,9 +20,6 @@ body {
     }
 }
 
-html {
-    scroll-behavior: smooth;
-}
 
 body>main {
     -ms-overflow-x: hidden;
@@ -402,6 +399,7 @@ body>main {
         right: 1rem;
 
         transform: translateY(-50%);
+        -ms-transform: translateY(-80%);
     }
 
     &::after {
@@ -450,10 +448,11 @@ body>main {
     position: fixed;
     width: 5rem;
     height: 5rem;
-    background-color: #c01920;
+    background-color: $c-main;
     right: 5rem;
     bottom: 5rem;
     display: none;
+    cursor: pointer;
     align-items: center;
     justify-content: space-around;
     z-index: 1000;
