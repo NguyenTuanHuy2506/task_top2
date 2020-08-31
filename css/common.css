@@ -114,16 +114,31 @@ body > main {
   font-size: 4.375vw;
   margin-left: 3.5rem;
 }
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 3rem;
+  }
+}
 .heading.heading--2 {
   font-size: 5vw;
   margin: 2rem 0;
   margin-left: 2.5rem;
+}
+@media screen and (max-width: 768px) {
+  .heading.heading--2 {
+    font-size: 3rem;
+  }
 }
 .heading .c-orange {
   color: #f39800;
   font-size: 6.25vw;
   position: relative;
   padding: 0 1.3rem 1rem 0;
+}
+@media screen and (max-width: 768px) {
+  .heading .c-orange {
+    font-size: 4rem;
+  }
 }
 .heading .c-orange::before, .heading .c-orange::after {
   content: "";
@@ -181,6 +196,11 @@ body > main {
   font-weight: 400;
   font-size: 1.875vw;
 }
+@media screen and (max-width: 768px) {
+  .sub-heading {
+    font-size: 1.4rem;
+  }
+}
 
 /*.passingbar */
 .passingbar {
@@ -194,6 +214,7 @@ body > main {
   bottom: 0;
   height: 100%;
   background-color: #f39800;
+  transform: skew(-15deg);
 }
 .passingbar.animated::after {
   -webkit-animation-name: passingBar;
@@ -213,8 +234,8 @@ body > main {
   animation-name: passingText;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
-  -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
@@ -239,6 +260,12 @@ body > main {
   font-style: italic;
   letter-spacing: 1rem;
 }
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+  }
+}
 .title .first-letter::first-letter {
   color: #f39800;
 }
@@ -247,6 +274,11 @@ body > main {
   font-size: 1.25vw;
   color: #000;
   letter-spacing: 0.1rem;
+}
+@media screen and (max-width: 768px) {
+  .title-sub {
+    font-size: 1.4rem;
+  }
 }
 
 .binis-title {
@@ -258,6 +290,11 @@ body > main {
   margin-top: 6rem;
   margin-bottom: 4rem;
   letter-spacing: 0.4rem;
+}
+@media screen and (max-width: 768px) {
+  .binis-title {
+    margin: 4rem 0;
+  }
 }
 .binis-title span {
   padding-bottom: 1.2rem;
@@ -274,6 +311,11 @@ body > main {
   letter-spacing: 0.3rem;
   line-height: 3rem;
 }
+@media screen and (max-width: 768px) {
+  .tt-description {
+    margin-left: 0;
+  }
+}
 
 .icon--triangle::after {
   content: "";
@@ -282,6 +324,7 @@ body > main {
   border-bottom: 0.6rem solid transparent;
   border-right: none;
   display: inline-block;
+  transform: translateY(-3px);
 }
 
 .button-more {
@@ -293,8 +336,13 @@ body > main {
   font-size: 2.2rem;
   font-weight: bold;
   border: 0.2rem solid #f39800;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   padding: 0;
+}
+@media screen and (max-width: 768px) {
+  .button-more {
+    height: 6rem;
+  }
 }
 
 .icon--db-square {
@@ -310,7 +358,7 @@ body > main {
   z-index: 1;
 }
 .icon--db-square::before {
-  top: 60%;
+  top: 65%;
   right: 1rem;
   transform: translateY(-50%);
 }
@@ -331,15 +379,63 @@ body > main {
   bottom: 3rem;
   transition: all 0.3s ease;
 }
+@media screen and (max-width: 768px) {
+  .button-square {
+    width: 5rem;
+    height: 5rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
 .button-square:hover {
   background-color: #f39800;
   opacity: 0.8;
+}
+.button-square:hover .icon--triangle::after {
+  border-left-color: #fff !important;
 }
 .button-square::after {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.to-top-button {
+  position: fixed;
+  width: 5rem;
+  height: 5rem;
+  background-color: #c01920;
+  right: 5rem;
+  bottom: 5rem;
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+.to-top-button.active {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .to-top-button {
+    right: 3rem;
+    bottom: 3rem;
+  }
+}
+.to-top-button span {
+  width: 3rem;
+  height: 0.2rem;
+  background-color: #fff;
+}
+.to-top-button span:nth-child(1) {
+  transform: translateX(0.4rem) rotate(-45deg);
+}
+.to-top-button span:nth-child(2) {
+  transform: translateX(-0.4rem) rotate(45deg);
+}
+.to-top-button:hover {
+  opacity: 0.8;
 }
 
 /*# sourceMappingURL=common.css.map */

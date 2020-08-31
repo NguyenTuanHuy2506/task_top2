@@ -13,6 +13,24 @@
     align-items: flex-start;
     position: fixed;
     z-index: 1030;
+    transition: all .3s ease;
+
+    &.active{
+    	align-items: center;
+    		background-color: rgba(#fff, .8);
+    	@media only screen and (min-width: 1500px) {
+	    	background-color: rgba($c-text, .8);
+	    }
+
+	    .header__logo{
+	    	margin-top: 0;
+	    }
+    }
+
+    @media only screen and(max-width: 1500px) {
+        height: 8rem;
+        align-items: center;
+    }
 
     /*	header__logo*/
     &__logo {
@@ -22,6 +40,17 @@
         margin-top: 1.7rem;
         margin-left: 2rem;
         transition: all .3s ease;
+
+        @media only screen and(max-width: 1500px) {
+            margin-top: 0;
+        }
+
+        @include mobile{
+        	max-width: 20rem;
+        	img{
+        		width: 100%;
+        	}
+        }
 
         &:hover {
             opacity: .8;
@@ -42,6 +71,25 @@
     /*    header__inner*/
     &__inner {
         margin-left: auto;
+
+        @media only screen and(max-width: 1500px) {
+            display: none;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: calc(100vh - 80px);
+            margin-top: 8rem;
+            overflow-y: auto;
+            background-color: red;
+            z-index: 1000;
+
+            &.active {
+                display: flex;
+            }
+        }
     }
 
     &__entry {
@@ -85,6 +133,11 @@
 
 /*menu*/
 .menu {
+    @media only screen and(max-width: 1500px) {
+        width: 100%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 
     /*	menu__item*/
     &__item {
@@ -97,6 +150,13 @@
         letter-spacing: .2rem;
         text-shadow: 0 0 .5rem rgba(#333, .5);
 
+        @media only screen and(max-width: 1500px) {
+            width: 100%;
+            max-width: 28rem;
+            text-align: center;
+            margin: 3rem 1rem;
+        }
+
         &:not(:first-child) {
             ::before {
                 content: '/';
@@ -105,6 +165,11 @@
                 top: 50%;
                 transform: translateY(-50%);
                 color: #fff;
+
+                @media only screen and(max-width: 1500px) {
+                    content: '';
+                    display: none;
+                }
             }
         }
 
@@ -127,5 +192,65 @@
             transform: scale(0, 0);
             transition: all .3s ease;
         }
+    }
+}
+
+/*==============
+	hambuger button
+==============*/
+.hambuger-button {
+    width: 3rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 1030;
+    border: 0;
+    outline: none !important;
+    display: none;
+    background-color: transparent;
+
+    span {
+        width: 3rem;
+        height: .2rem;
+        background-color: #333;
+        position: absolute;
+        left: 0;
+        transition: all .3s ease;
+
+        &:nth-of-type(1) {
+            top: 0;
+        }
+
+        &:nth-of-type(2) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &:nth-of-type(3) {
+            bottom: 0;
+        }
+    }
+
+    &.active {
+        span:nth-of-type(1) {
+            transform: translateY(.9rem) rotate(45deg);
+        }
+
+        span:nth-of-type(2) {
+            opacity: 0;
+        }
+
+        span:nth-of-type(3) {
+            transform: translateY(-.9rem) rotate(-45deg);
+        }
+    }
+
+    @media only screen and(max-width: 1500px) {
+        display: block;
+        top: 3rem;
+        right: 5rem;
+    }
+
+    @include mobile {
+        right: 2rem;
     }
 }

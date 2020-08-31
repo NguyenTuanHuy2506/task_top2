@@ -244,9 +244,44 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     }
 }
 
+@-webkit-keyframes bounceInLeft2 {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-2000px);
+        -ms-transform: translateX(-2000px);
+        transform: translateX(-2000px);
+    }
+
+    100% {opacity: 1;
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounceInLeft2 {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-2000px);
+        -ms-transform: translateX(-2000px);
+        transform: translateX(-2000px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
 .bounceInLeft {
     -webkit-animation-name: bounceInLeft;
     animation-name: bounceInLeft;
+}
+.bounceInLeft2 {
+    -webkit-animation-name: bounceInLeft2;
+    animation-name: bounceInLeft2;
 }
 
 @-webkit-keyframes bounceInRight {
@@ -507,9 +542,42 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     }
 }
 
+@-webkit-keyframes bounceOutLeft2 {
+    0% {
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateX(-2000px);
+        -ms-transform: translateX(-2000px);
+        transform: translateX(-2000px);
+    }
+}
+@keyframes bounceOutLeft2 {
+    0% {
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateX(-2000px);
+        -ms-transform: translateX(-2000px);
+        transform: translateX(-2000px);
+    }
+}
+
 .bounceOutLeft {
     -webkit-animation-name: bounceOutLeft;
     animation-name: bounceOutLeft;
+}
+.bounceOutLeft2 {
+    -webkit-animation-name: bounceOutLeft2;
+    animation-name: bounceOutLeft2;
 }
 
 @-webkit-keyframes bounceOutRight {
@@ -813,6 +881,44 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
     100% {
         opacity: 1;
+    }
+}
+
+@-webkit-keyframes slowInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-120%) scale(0.5);
+        transform: translateX(-120%) scale(0.5);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translateX(50%) scale(0.5);
+        transform: translateX(50%) scale(0.5);
+    }
+
+    100% {
+        -webkit-transform: translateX(0) scale(1);
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes slowInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-120%) scale(0.5);
+        transform: translateX(-120%) scale(0.5);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translateX(50%) scale(0.5);
+        transform: translateX(50%) scale(0.5);
+    }
+
+    100% {
+        -webkit-transform: translateX(0) scale(1);
+        transform: translateX(0) scale(1);
     }
 }
 

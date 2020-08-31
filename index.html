@@ -21,6 +21,7 @@
     <link href="assets/plugins/slick/slick-theme.css" rel="stylesheet">
     <!-- build:addcss -->
     <link href="css/common.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
     <link href="css/header.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
@@ -35,7 +36,7 @@
             <img src="images/img_logo.jpg" alt="logo header">
             <a class="nav--link" href="#"></a>
         </h1>
-        <nav class="header__inner">
+        <nav class="header__inner bounceInLeft2 animated">
             <ul class="header__menu menu">
                 <li class="menu__item">
                     TOP
@@ -68,6 +69,11 @@
             </ul>
             <button class="header__entry overlap-effect"><span>ENTRY</span></button>
         </nav>
+        <button class="hambuger-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
     <main>
         <!-- build:content -->
@@ -116,7 +122,7 @@
                 <!-- 
                 	notice inner
                 	 -->
-                <ul class="notice__inner">
+                <ul class="notice__inner wow animated fadeInLeft">
                     <li>
                         <h6 class="notice__title">新着情報<a class="nav--link" href="#"></a></h6>
                         <p><span class="notice__date">2000.00.00</span>
@@ -133,8 +139,8 @@
         	 -->
         <section class="business">
             <h2 class="title">
-                <span class="first-letter">BUSINESS</span>
-                <span class="title-sub">事業紹介</span>
+                <span class="first-letter passing passingbar passingtext">BUSINESS</span>
+                <span class="title-sub passing passingbar passingtext">事業紹介</span>
             </h2>
             <div class="business__container">
                 <ul class="business__pri-slick">
@@ -160,20 +166,20 @@
                             <img src="images/img_business1.jpg" alt="">
                         </li>
                     </ul>
-                    <h3 class="binis-title">
+                    <h3 class="binis-title wow animated fadeInLeft">
                         <span>自動車内装材</span>
                     </h3>
-                    <p class="tt-description">ダミーテキスト。ここに事業の説明文が入ります。</p>
-                    <p class="tt-description">ここに事業の説明文が入ります。ダミーテキスト。</p>
+                    <p class="tt-description wow animated fadeInLeft">ダミーテキスト。ここに事業の説明文が入ります。</p>
+                    <p class="tt-description wow animated fadeInLeft">ここに事業の説明文が入ります。ダミーテキスト。</p>
                 </div>
             </div>
             <ul class="business__inner">
-                <li>
+                <li class="wow animated fadeInLeft">
                     <img src="images/img_business4.jpg" alt="⾝近なところに住江織物（仮">
                     <h6><span class="bg-orange">⾝近なところに住江織物（仮）</span></h6>
                     <a class="button-square icon--triangle" href="#"></a>
                 </li>
-                <li>
+                <li class="wow animated fadeInRight">
                     <img src="images/img_business5.jpg" alt="⾝近なところに住江織物（仮">
                     <h6>早わかり住江織物</h6>
                     <a class="button-square icon--triangle" href="#"></a>
@@ -184,13 +190,13 @@
             <object class="decoration"></object>
             <div class="container">
                 <ul class="message__inner">
-                    <li>
+                    <li class="wow animated fadeInLeft">
                         <img src="images/img_message01.jpg" alt="企業理念・社⻑メッセージ">
                         <button class="button-more overlap-effect">
                             <span>企業理念・社⻑メッセージ<i class="icon--triangle"> </i></span>
                         </button>
                     </li>
-                    <li>
+                    <li class=" wow animated fadeInRight">
                         <img src="images/img_message02.jpg" alt="プロジェクトストーリー">
                         <button class="button-more overlap-effect">
                             <span>プロジェクトストーリー<i class="icon--triangle"></i></span>
@@ -203,20 +209,24 @@
             <object class="decoration"></object>
             <div class="container">
                 <ul class="environ__inner">
-                    <li class="environ__img">
+                    <li class="environ__img wow fadeInLeft">
                         <img src="images/img_env.jpg" alt="">
                         <a class="nav--link" href="#"></a>
                     </li>
                     <li class="environ__content">
                         <h2 class="title">
-                            <span class="first-letter">ENVIRONMENT</span>
-                            <span class="title-sub">働く環境を知る</span>
+                            <span class="first-letter passing passingbar passingtext">ENVIRONMENT</span>
+                            <span class="title-sub passing passingbar passingtext">働く環境を知る</span>
                         </h2>
-                        <ul class="environ__detail">
-                            <li>ダミーテキスト。</li>
-                            <li>ここにメッセージが入ります。</li>
-                            <li>ダミーテキスト。</li>
-                            <li>ここにメッセージが入ります。</li>
+                        <ul class="environ__detail wow fadeInRight">
+                            <li>
+                                <p>
+                                    ダミーテキスト。<br />
+                                    ここにメッセージが入ります。<br />
+                                    ダミーテキスト。<br />
+                                    ここにメッセージが入ります。<br />
+                                </p>
+                            </li>
                             <li>
                                 <button class="button-more overlap-effect"><span>キャリアデザイン
                                         <i class="icon--triangle"></i></span>
@@ -238,6 +248,11 @@
             </div>
         </section>
         <section class="people">
+            <object class="decoration"></object>
+            <h2 class="title">
+                <span class="first-letter passing passingbar passingtext">PEOPLE</span>
+                <span class="title-sub passing passingbar passingtext">働く環境を知る</span>
+            </h2>
             <ul class="people__inner">
                 <li>
                     <img src="images/img_people01.jpg">
@@ -277,34 +292,36 @@
         <section class="intell">
             <div class="container">
                 <ul class="intell__inner">
-                    <li>
+                    <li class="wow fadeInLeft animated">
                         <img src="images/img_forum.jpg" alt="">
                         <button class="button-more overlap-effect">
                             <span>若⼿座談会<i class="icon--triangle"></i></span>
                         </button>
                     </li>
-                    <li>
+                    <li class="wow fadeInRight animated">
                         <img src="images/img_employee.jpg" alt="">
                         <button class="button-more overlap-effect">
                             <span>海外で活躍する社員<i class="icon--triangle"></i></span>
                         </button>
                     </li>
                 </ul>
-                <div class="intell__img">
+                <div class="intell__img wow fadeInLeft animated">
                     <img src="images/img_intell.jpg" alt="採⽤情報">
                     <button class="button-more overlap-effect">
-                        <span>採⽤情報<i class="icon--triangle-c"></i></span>
+                        <span>採⽤情報<i class="button-square icon--triangle"></i></span>
                     </button>
                 </div>
                 <ul class="intell__button">
-                    <li>
+                    <li class="wow fadeInLeft animated">
                         <button class="button-more overlap-effect">
                             <span>会社概要<i class="icon--triangle"></i></span>
                         </button>
                     </li>
-                    <li> <button class="button-more overlap-effect">
+                    <li class="wow fadeInRight animated">
+                        <button class="button-more overlap-effect">
                             <span>住江織物グループについて<i class="icon--triangle"></i></span>
-                        </button></li>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -323,8 +340,10 @@
             </ul>
         </div>
     </footer>
+    <a class="to-top-button animated bounceInUp"><span></span><span></span></a>
     <script src="assets/js/jquery-2.2.4.min.js"></script>
     <script src="assets/plugins/slick/slick.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/index.js"></script>
     <!-- build:addJs -->
 </body>

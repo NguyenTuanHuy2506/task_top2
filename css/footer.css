@@ -2,12 +2,26 @@
   width: 100%;
   height: 10rem;
   background-color: #f39800;
+  margin-top: 10rem;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    margin-top: 5rem;
+  }
 }
 .footer ul {
   width: 100%;
   height: 10rem;
   display: flex;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .footer ul {
+    padding: 0 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
 }
 .footer ul li {
   padding-right: 2rem;
@@ -18,6 +32,12 @@
 }
 .footer ul .copyright {
   margin-left: auto;
+}
+@media screen and (max-width: 768px) {
+  .footer ul .copyright {
+    margin-left: 0;
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=footer.css.map */

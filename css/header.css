@@ -9,9 +9,28 @@
   align-items: flex-start;
   position: fixed;
   z-index: 1030;
+  transition: all 0.3s ease;
   /*	header__logo*/
   /*    header__menu*/
   /*    header__inner*/
+}
+.header.active {
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+@media only screen and (min-width: 1500px) {
+  .header.active {
+    background-color: rgba(51, 51, 51, 0.8);
+  }
+}
+.header.active .header__logo {
+  margin-top: 0;
+}
+@media only screen and (max-width: 1500px) {
+  .header {
+    height: 8rem;
+    align-items: center;
+  }
 }
 .header__logo {
   width: 100%;
@@ -20,6 +39,19 @@
   margin-top: 1.7rem;
   margin-left: 2rem;
   transition: all 0.3s ease;
+}
+@media only screen and (max-width: 1500px) {
+  .header__logo {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__logo {
+    max-width: 20rem;
+  }
+  .header__logo img {
+    width: 100%;
+  }
 }
 .header__logo:hover {
   opacity: 0.8;
@@ -33,6 +65,25 @@
 }
 .header__inner {
   margin-left: auto;
+}
+@media only screen and (max-width: 1500px) {
+  .header__inner {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: calc(100vh - 80px);
+    margin-top: 8rem;
+    overflow-y: auto;
+    background-color: red;
+    z-index: 1000;
+  }
+  .header__inner.active {
+    display: flex;
+  }
 }
 .header__entry {
   min-width: 24rem;
@@ -65,6 +116,13 @@
 .menu {
   /*	menu__item*/
 }
+@media only screen and (max-width: 1500px) {
+  .menu {
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
 .menu__item {
   position: relative;
   padding: 0.5rem 1rem;
@@ -74,6 +132,14 @@
   letter-spacing: 0.2rem;
   text-shadow: 0 0 0.5rem rgba(51, 51, 51, 0.5);
 }
+@media only screen and (max-width: 1500px) {
+  .menu__item {
+    width: 100%;
+    max-width: 28rem;
+    text-align: center;
+    margin: 3rem 1rem;
+  }
+}
 .menu__item:not(:first-child) ::before {
   content: "/";
   position: absolute;
@@ -81,6 +147,12 @@
   top: 50%;
   transform: translateY(-50%);
   color: #fff;
+}
+@media only screen and (max-width: 1500px) {
+  .menu__item:not(:first-child) ::before {
+    content: "";
+    display: none;
+  }
 }
 .menu__item:hover {
   opacity: 0.8;
@@ -98,6 +170,59 @@
   height: 0.2rem;
   transform: scale(0, 0);
   transition: all 0.3s ease;
+}
+
+/*==============
+	hambuger button
+==============*/
+.hambuger-button {
+  width: 3rem;
+  height: 2rem;
+  position: fixed;
+  z-index: 1030;
+  border: 0;
+  outline: none !important;
+  display: none;
+  background-color: transparent;
+}
+.hambuger-button span {
+  width: 3rem;
+  height: 0.2rem;
+  background-color: #333;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+.hambuger-button span:nth-of-type(1) {
+  top: 0;
+}
+.hambuger-button span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.hambuger-button span:nth-of-type(3) {
+  bottom: 0;
+}
+.hambuger-button.active span:nth-of-type(1) {
+  transform: translateY(0.9rem) rotate(45deg);
+}
+.hambuger-button.active span:nth-of-type(2) {
+  opacity: 0;
+}
+.hambuger-button.active span:nth-of-type(3) {
+  transform: translateY(-0.9rem) rotate(-45deg);
+}
+@media only screen and (max-width: 1500px) {
+  .hambuger-button {
+    display: block;
+    top: 3rem;
+    right: 5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hambuger-button {
+    right: 2rem;
+  }
 }
 
 /*# sourceMappingURL=header.css.map */
