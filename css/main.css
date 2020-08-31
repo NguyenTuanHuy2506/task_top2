@@ -528,6 +528,14 @@
   width: 31.25vw;
   position: relative;
 }
+.message__inner li div {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.message__inner li div img {
+  transform-origin: center 40%;
+}
 @media only screen and (max-width: 1500px) {
   .message__inner li {
     width: calc(50% - 60px);

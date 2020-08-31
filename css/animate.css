@@ -910,16 +910,22 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         transform: translateX(-120%) scale(0.5);
     }
 
-    60% {
+    50% {
         opacity: 1;
-        -webkit-transform: translateX(50%) scale(0.5);
-        transform: translateX(50%) scale(0.5);
-    }
-
-    100% {
-        -webkit-transform: translateX(0) scale(1);
+         -webkit-transform: translateX(0) scale(1);
         transform: translateX(0) scale(1);
     }
+
+
+    100% {
+     -webkit-transform: translateX(0) scale(1.1);
+       transform: translateX(0) scale(1.1);
+    }
+}
+.slowInLeft {
+    -webkit-animation-name: slowInLeft;
+    animation-name: slowInLeft;
+    animation-timing-function: linear;
 }
 
 /*.passingtext {

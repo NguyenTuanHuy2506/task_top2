@@ -28,7 +28,7 @@ $(window).on('load resize scroll',
         //--passing bar
         $(".passing").each(function() {
             var _position = $(this).offset().top;
-            if (_scroll + _wh > _position + _wh /4) {
+            if (_scroll > _position - _wh + _wh /8) {
                 $(this).addClass('animated');
             }
         });
@@ -152,9 +152,10 @@ $('.hambuger-button').click(function() {
 
 $('.to-top-button').click(function(event) {
     /* Act on the event */
+    var _timed = $(window).scrollTop();
     $('html, body').animate({
         scrollTop: 0 //$($.attr(this, 'href')).offset().top
-    }, 'slow', 'linear');
+    }, _timed/2, 'linear');
     return false;
 });
 //----------delay function-------//
