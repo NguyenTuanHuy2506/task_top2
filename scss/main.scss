@@ -13,19 +13,21 @@
     position: relative;
     overflow: hidden;
 
-    @include mobile{
-    	height: 100vh;
+    @include mobile {
+        height: 100vh;
     }
 
-    /*	mv__inner*/
+    /*  mv__inner*/
     &__inner {
         width: 100%;
-        @include mobile{
-        	height: 100%;
+
+        @include mobile {
+            height: 100%;
         }
 
-        .slick-list, .slick-track{
-        	height: 100%;
+        .slick-list,
+        .slick-track {
+            height: 100%;
         }
     }
 
@@ -47,10 +49,11 @@
 
         img {
             width: 100%;
-            @include mobile{
-            	height: 100%;
-            	object-fit: cover;
-            	object-position: 80% center;
+
+            @include mobile {
+                height: 100%;
+                object-fit: cover;
+                object-position: 80% center;
             }
         }
     }
@@ -64,11 +67,11 @@
         max-width: 50.875vw;
         z-index: 10;
 
-        @include mobile{
-        	left: calc((100vw - 320px)* 0.2);
-        	max-width: 100%;
-        	padding: 4rem 1rem;
-        	bottom: 10vh;
+        @include mobile {
+            left: calc((100vw - 320px)* 0.2);
+            max-width: 100%;
+            padding: 4rem 1rem;
+            bottom: 10vh;
         }
     }
 }
@@ -232,7 +235,7 @@
     width: 100%;
     background-color: #000;
 
-    /*	notice__inner*/
+    /*  notice__inner*/
     &__inner {
         width: 100%;
 
@@ -241,26 +244,26 @@
             align-items: center;
             height: 8rem;
 
-            @include mobile{
-            	padding: 0 2rem;
-            	height: 6rem;
+            @include mobile {
+                padding: 0 2rem;
+                height: 6rem;
             }
 
-            p{
-            	display: inline-block;
-            	padding-right: 6rem;
-            	white-space: nowrap;
-            	text-overflow: ellipsis;
-            	overflow: hidden;
+            p {
+                display: inline-block;
+                padding-right: 6rem;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
 
-            	@media only screen and(max-width: 420px){
-            		display: none;
-            	}
+                @media only screen and(max-width: 420px) {
+                    display: none;
+                }
             }
 
             .notice__title {
                 position: relative;
-                min-width: 10rem;	
+                min-width: 10rem;
 
                 &:hover {
                     opacity: .8;
@@ -322,16 +325,18 @@
 /*business*/
 .business {
     width: 100%;
- 	margin-top: 10rem;
-    @include mobile{
-    	margin-top: 5rem;
+    margin-top: 10rem;
+
+    @include mobile {
+        margin-top: 5rem;
     }
 
     &__container {
         margin-top: 7rem;
-        @include mobile{
-        	margin-top: 1rem;
-        	flex-direction: column-reverse;
+
+        @include mobile {
+            margin-top: 1rem;
+            flex-direction: column-reverse;
         }
     }
 
@@ -347,9 +352,10 @@
         max-width: 50vw;
         width: 100%;
         overflow: hidden;
-        @include mobile{
-        	max-width: 100%;
-        	padding: 0 2rem;
+
+        @include mobile {
+            max-width: 100%;
+            padding: 0 2rem;
         }
     }
 
@@ -358,10 +364,11 @@
         width: 100%;
         overflow: hidden;
 
-        @include mobile{
-        	max-width: 100%;
-        	margin-top: 3rem;
+        @include mobile {
+            max-width: 100%;
+            margin-top: 3rem;
         }
+
         &::after {
             content: '';
             position: absolute;
@@ -391,10 +398,10 @@
             top: auto;
             bottom: 4rem;
 
-            @include mobile{
-            	width: 4rem;
-            	height: 3rem;
-            	bottom: 2rem;
+            @include mobile {
+                width: 4rem;
+                height: 3rem;
+                bottom: 2rem;
             }
 
             &::before {
@@ -406,21 +413,24 @@
                 border-top: .4rem solid transparent;
                 border-right: .4rem solid transparent;
                 border-left: .4rem solid transparent;
-                @include mobile{
-	            	width: 2.2rem;
-	            	height: 1.2rem;
-	            }
+
+                @include mobile {
+                    width: 2.2rem;
+                    height: 1.2rem;
+                }
             }
         }
 
         .slick-prev {
             right: calc(13rem + 2.175vw + 100vw/160);
-            @include mobile{
-            	right: calc(5rem + 2.175vw + 100vw/160);
+
+            @include mobile {
+                right: calc(5rem + 2.175vw + 100vw/160);
             }
+
             // border-left:
             &::before {
-            	margin-left: 1rem;
+                margin-left: 1rem;
                 border-left: .6rem solid #fff;
                 transform: skew(-50deg);
             }
@@ -428,11 +438,13 @@
 
         .slick-next {
             right: calc(2.175vw + 100vw/160);
-			 @include mobile{
-            	right: calc(2.175vw + 100vw/160);
+
+            @include mobile {
+                right: calc(2.175vw + 100vw/160);
             }
+
             &::before {
-            	margin-right: 1rem;
+                margin-right: 1rem;
                 transform: skew(50deg);
                 border-right: .6rem solid #fff;
             }
@@ -445,8 +457,8 @@
         transform: skew(-15deg);
         overflow: hidden;
 
-        @include ipadpro{
-        	display: none;
+        @include ipadpro {
+            display: none;
         }
 
         li {
@@ -463,18 +475,20 @@
         width: 100%;
         display: flex;
         margin-top: 15rem;
-        @include mobile{
-            	margin-top: 5rem;
-            	flex-direction: column;
-            }
+
+        @include mobile {
+            margin-top: 5rem;
+            flex-direction: column;
+        }
+
         li {
             width: 100%;
             max-width: 50%;
             position: relative;
 
-            @include mobile{
-            	max-width: 100%;
-            	margin-top: 3rem;
+            @include mobile {
+                max-width: 100%;
+                margin-top: 3rem;
             }
 
             img {
@@ -493,13 +507,13 @@
                 transform: translateY(-50%);
                 color: #fff;
 
-                @include ipadpro{
-                	font-size: 2.5rem;
+                @include ipadpro {
+                    font-size: 2.5rem;
                 }
 
-                @include mobile{
-            	font-size: 1.6rem;
-            }
+                @include mobile {
+                    font-size: 1.6rem;
+                }
 
             }
 
@@ -516,10 +530,11 @@
     width: 100%;
     padding-top: 12rem;
     position: relative;
-    @include mobile{
-    			padding-top: 0;
-            	margin-top: 5rem;
-            }
+
+    @include mobile {
+        padding-top: 0;
+        margin-top: 5rem;
+    }
 
     .decoration {
         position: absolute;
@@ -530,30 +545,33 @@
         height: 28.75vw;
         max-height: 46rem;
         background-color: #f8f8f8;
-        @include mobile{
-            	height: 100%;
-            }
+
+        @include mobile {
+            height: 100%;
+        }
     }
 
     &__inner {
         width: 100%;
         display: flex;
         justify-content: space-between;
-        @include mobile{
-            	flex-direction: column;
-            	padding: 0 2rem;
-            }
+
+        @include mobile {
+            flex-direction: column;
+            padding: 0 2rem;
+        }
 
         li {
             max-width: 50rem;
             width: 31.25vw;
             position: relative;
 
-            div{
+            div {
                 width: 100%;
                 height: 100%;
                 overflow: hidden;
-                img{
+
+                img {
                     transform-origin: center 40%;
                 }
             }
@@ -562,13 +580,14 @@
                 width: calc(50% - 60px);
             }
 
-            @include ipadpro{
-            	width: calc(50% - 20px);
+            @include ipadpro {
+                width: calc(50% - 20px);
             }
-            @include mobile{
-            	width: 100%;
-            	max-width: 100%;
-            	margin-top: 5rem;
+
+            @include mobile {
+                width: 100%;
+                max-width: 100%;
+                margin-top: 5rem;
             }
 
             img {
@@ -581,21 +600,23 @@
                 bottom: 0;
                 left: -2rem;
                 transform: translateY(50%);
-                @include mobile{
-            	left: 0;
-            }
-                
-                span{
-                	@extend %font-noto;
-	                font-weight: bold;
-	                font-size: 2.2rem;
-	                padding-left: 6rem;
-	                letter-spacing: .2rem;
-	                @include mobile{
-            	padding-left: 2rem;
-            	font-size: 1.6rem;
-            	letter-spacing: .1rem;
-            }
+
+                @include mobile {
+                    left: 0;
+                }
+
+                span {
+                    @extend %font-noto;
+                    font-weight: bold;
+                    font-size: 2.2rem;
+                    padding-left: 6rem;
+                    letter-spacing: .2rem;
+
+                    @include mobile {
+                        padding-left: 2rem;
+                        font-size: 1.6rem;
+                        letter-spacing: .1rem;
+                    }
                 }
 
                 &.overlap-effect {
@@ -622,9 +643,10 @@
 
                 .icon--triangle {
                     margin: 0 4rem;
-                    @include mobile{
-            	margin: 0 2rem;
-            }
+
+                    @include mobile {
+                        margin: 0 2rem;
+                    }
                 }
             }
         }
@@ -636,28 +658,33 @@
     position: relative;
     margin-top: 13.5rem;
     padding-top: 10rem;
-    @include mobile{
-    	margin-top: 5rem;
-            	padding-top: 3rem;
-            }
+
+    @include mobile {
+        margin-top: 5rem;
+        padding-top: 3rem;
+    }
 
     .decoration {
         position: absolute;
         top: 0;
         left: 0;
-        width: 70%;
+        width: calc(50% + 320px);
         height: calc(100% + 60px);
         background-color: #f8f8f8;
-        z-index: -1
+        z-index: -1;
+        @include mobile{
+            height: 100%;
+        }
     }
 
     &__inner {
         width: 100%;
         display: flex;
         align-items: flex-start;
-        @include mobile{
-            	flex-direction: column-reverse;
-            }
+
+        @include mobile {
+            flex-direction: column-reverse;
+        }
 
         li {
             position: relative;
@@ -668,11 +695,15 @@
         width: 10%;
         min-width: calc((600 / 1120) * 100%);
 
+        @include ipadpro{
+            min-width: calc((600 / 1120) * 95%);
+        }
+
         // position: relative;
-        @include mobile{
-            	min-width: calc(100% - 20px);
-            	margin-top: 3rem;
-            }
+        @include mobile {
+            min-width: calc(100% - 20px);
+            margin-top: 3rem;
+        }
 
         &::after {
             content: '';
@@ -704,13 +735,14 @@
         width: 100%;
         padding-left: 10rem;
 
-        @include laptop1{
-        	padding-left: 5rem;
+        @include laptop1 {
+            padding-left: 5rem;
         }
-        @include mobile{
-            	padding: 0 2rem;
-            	margin-top: 3rem;
-            }
+
+        @include mobile {
+            padding: 0 2rem;
+            margin-top: 3rem;
+        }
 
         .title {
             align-items: flex-start;
@@ -735,6 +767,7 @@
                 line-height: 3rem;
                 margin-top: 4.5rem;
                 margin-bottom: 2.5rem;
+                letter-spacing: .2rem;
             }
         }
 
@@ -742,12 +775,13 @@
             width: 34rem;
             margin-top: 1rem;
 
-            .icon--triangle{
-            	position: absolute;
-            	right: 4rem;
-            	@include mobile{
-            	right: 2rem;
-            }
+            .icon--triangle {
+                position: absolute;
+                right: 4rem;
+
+                @include mobile {
+                    right: 2rem;
+                }
             }
 
             &.overlap-effect {
@@ -756,8 +790,8 @@
                         color: $c-main;
                     }
 
-                    .icon--triangle::after{
-                    	border-left-color: $c-main;
+                    .icon--triangle::after {
+                        border-left-color: $c-main;
                     }
                 }
 
@@ -779,34 +813,40 @@
     width: 100%;
     margin-top: 15rem;
     position: relative;
-    @include mobile{
-            	margin-top: 5rem;
-            }
+
+    @include mobile {
+        margin-top: 5rem;
+    }
 
     .decoration {
         position: absolute;
         top: 0;
-        ;
         left: 0;
         right: 0;
         height: 0;
-        margin: 3rem auto;
-        padding-top: 38.625%;
+        margin: 2.3vw auto;
+        height: calc(100% - 80px);
         width: 70vw;
         background-color: #f8f8f8;
-        z-index: -1
+        z-index: -1;
+
+        @include mobile{
+            width: 100%;
+            height: calc(100% - 45px);
+        }
     }
 
     &__inner {
         width: 100%;
         margin-top: 6rem;
 
-        li{
-        	@include mobile{
-            	img{
-            		width: 100%;
-            	}
+        li {
+            margin: 0 1rem;
+
+            img {
+                width: 100%;
             }
+
         }
 
         .slick-next,
@@ -835,9 +875,11 @@
 
         .slick-prev {
             left: 18.75vw;
-            @include mobile{
-            	left: 2rem;
+
+            @include mobile {
+                left: 2rem;
             }
+
             span {
                 &:first-child {
                     transform-origin: top left;
@@ -853,8 +895,9 @@
 
         .slick-next {
             right: 18.75vw;
-            @include mobile{
-            	right: 2rem;
+
+            @include mobile {
+                right: 2rem;
             }
 
             span {
@@ -930,19 +973,23 @@
         display: flex;
         justify-content: space-between;
         margin-top: 11rem;
-        @include mobile{
-        	flex-direction: column;
-            	margin-top: 3rem;
-            	padding: 0 2rem;
-            }
+
+        @include mobile {
+            flex-direction: column;
+            margin-top: 3rem;
+            padding: 0 2rem;
+        }
+
         li {
             max-width: calc(50% - 60px);
             width: 100%;
             position: relative;
-            @include mobile{
-            	max-width: 100%;
-            	margin-top: 5rem;
+
+            @include mobile {
+                max-width: 100%;
+                margin-top: 5rem;
             }
+
             img {
                 width: 100%;
             }
@@ -955,7 +1002,7 @@
             left: 50%;
             transform: translate(-50%, 50%);
 
-             &.overlap-effect {
+            &.overlap-effect {
                 &:hover {
                     span {
                         color: $c-main;
@@ -973,9 +1020,9 @@
                 }
             }
 
-            .icon--triangle{
-            	position: absolute;
-            	right: 3rem;
+            .icon--triangle {
+                position: absolute;
+                right: 3rem;
             }
         }
     }
@@ -986,16 +1033,18 @@
         background-color: #f39800;
         margin-top: 14rem;
         overflow: hidden;
-        @include mobile{
-            	height: 12rem;
-            }
+
+        @include mobile {
+            height: 12rem;
+        }
 
         img {
             width: 100%;
             opacity: .2;
-            @include mobile{
-            	height: 100%;
-            	object-fit: cover;
+
+            @include mobile {
+                height: 100%;
+                object-fit: cover;
             }
         }
 
@@ -1026,9 +1075,9 @@
                         border-color: $c-main;
                     }
 
-                    .button-square{
-                    	border-color: $c-main;
-                    	background-color: $c-main;
+                    .button-square {
+                        border-color: $c-main;
+                        background-color: $c-main;
                     }
                 }
 
@@ -1043,13 +1092,13 @@
                 }
             }
 
-            span{
-            	border: 2px solid #fff;
+            span {
+                border: 2px solid #fff;
             }
 
-            .button-square{
-            	right: -2px;
-            	bottom: -2px;
+            .button-square {
+                right: -2px;
+                bottom: -2px;
             }
         }
     }
@@ -1060,17 +1109,19 @@
         align-items: flex-start;
         justify-content: space-between;
         margin-top: 6rem;
-        @include mobile{
-        	margin-top: 3rem;
-            	flex-direction: column;
-            	padding: 0 2rem;
-            }
+
+        @include mobile {
+            margin-top: 3rem;
+            flex-direction: column;
+            padding: 0 2rem;
+        }
 
         li {
             width: 100%;
             max-width: calc(50% - 1rem);
-            @include mobile{
-            	max-width: 100%;
+
+            @include mobile {
+                max-width: 100%;
             }
 
             .button-more {
@@ -1079,9 +1130,10 @@
                 background-color: #fff;
                 color: #262626;
                 transition: all .3s ease;
-                @include mobile{
-            	font-size: 1.6rem;
-            }
+
+                @include mobile {
+                    font-size: 1.6rem;
+                }
 
                 &.overlap-effect {
                     &:hover {
@@ -1091,8 +1143,8 @@
                             color: #fff;
                         }
 
-                        .icon--triangle::after{
-                        	border-left-color: #fff;
+                        .icon--triangle::after {
+                            border-left-color: #fff;
                         }
                     }
 
@@ -1108,11 +1160,12 @@
 
                 }
 
-                .icon--triangle{
-                	margin-left: 3rem;
-                	&::after{
-                		border-left-color: $c-main;
-                	}
+                .icon--triangle {
+                    margin-left: 3rem;
+
+                    &::after {
+                        border-left-color: $c-main;
+                    }
                 }
             }
         }

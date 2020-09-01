@@ -285,16 +285,19 @@ body>main {
 .title {
     @extend %font-noto;
     font-weight: bold;
-    font-size: 3.75vw; // calc((100vw / 1600) * 1 + 60px); // clamp(24px, 3.75vw, 60px);
+    font-size: 6rem;//calc((100vw / 1600) * 60);//3.75vw calc((100vw / 1600) * 1 + 60px); // clamp(24px, 3.75vw, 60px);
     color: #1b1b1b;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-style: italic;
-    letter-spacing: 1rem;
+    letter-spacing: .4rem;
+    @media only screen and(max-width: 1500px){
+        font-size: 3.75vw;
+    }
 
     @include mobile{
-        font-size: 3rem;
+        font-size: 3.5rem;
         letter-spacing: .5rem;
     }
 
@@ -304,6 +307,7 @@ body>main {
 
 
     &-sub {
+        margin-top: 1rem;
         @extend %font-noto;
         font-weight: 400;
         font-size: 1.25vw; // calc((100vw / 1600) *1 + 20px); // clamp(14px, 1.25vw, 20px);

@@ -57,6 +57,13 @@ function _businessPrimarySlick() {
         autoplay: true,
         autoplaySpeed: 2000,
         asNavFor: '.business__sec-slick',
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+                asNavFor:''
+            }
+        }]
+
     });
 }
 _businessPrimarySlick();

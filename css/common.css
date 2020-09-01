@@ -248,17 +248,22 @@ body > main {
 /*.title*/
 .title {
   font-weight: bold;
-  font-size: 3.75vw;
+  font-size: 6rem;
   color: #1b1b1b;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-style: italic;
-  letter-spacing: 1rem;
+  letter-spacing: 0.4rem;
+}
+@media only screen and (max-width: 1500px) {
+  .title {
+    font-size: 3.75vw;
+  }
 }
 @media screen and (max-width: 768px) {
   .title {
-    font-size: 3rem;
+    font-size: 3.5rem;
     letter-spacing: 0.5rem;
   }
 }
@@ -266,6 +271,7 @@ body > main {
   color: #f39800;
 }
 .title-sub {
+  margin-top: 1rem;
   font-weight: 400;
   font-size: 1.25vw;
   color: #000;
